@@ -1,0 +1,231 @@
+.handleItemImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+
+.itemOptions{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px 9px 0 0;
+    margin-top: -23px;
+    z-index: 2;
+    position: absolute;
+}
+
+.optionHeader{
+    font-weight: 700;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    color: #202020;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    gap: 6px;
+    margin-top: 13px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #F9F9F9;
+}
+
+
+.handleOption{
+    position: relative;
+}
+
+.check{
+    position: absolute;
+    z-index: 3;
+    bottom: 7px;
+    left: 8px;
+}
+
+.itemSizes{
+    margin-top: 16px;
+}
+
+.sizeHeader{
+    font-weight: 700;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    color: #202020;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.sizes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    gap: 6px;
+}
+
+.size{
+    margin-top: 13px;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    border: 1px solid #F9F9F9;
+    transition: 0.3s;
+}
+
+.active{
+    border: 1px solid #004CFF;
+    background-color: #E7EBFA;
+}
+
+.disable{
+    background-color: #E7EBFA;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.itemQuantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 34px;
+}
+
+.quantity{
+    display: flex;
+    gap: 10px;
+}
+
+.quantityHeader{
+    font-weight: 700;
+    font-size: 17px;
+    font-family: "Raleway", sans-serif;
+    color: #202020;
+
+}
+
+.count{
+    width: 74px;
+    height: 50px;
+    background-color: #E5EBFC;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    font-family: "Raleway", sans-serif;
+    color: #1A3168;
+    font-weight: 500;
+}
+
+.one{
+    margin-top: -8px;
+}
+
+.decrement{
+    border-radius: 50%;
+    border: 2px solid #004BFE;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.increment{
+    border-radius: 50%;
+    border: 2px solid #004BFE;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dec{
+    font-size: 25px;
+    color: #004BFE;
+    margin-top: -5px;
+    font-weight: 900;
+}
+.inc{
+    font-size: 25px;
+    color: #004BFE;
+    font-weight: 900;
+}
+
+.decrement,
+.increment,
+.count {
+    user-select: none;
+}
+
+.action{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 375px;
+    margin: auto;
+}
+
+.container{
+   max-width: 370px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favIcon{
+    width: 47px;
+    height: 40px;
+    background-color: #F9F9F9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartBtn{
+    width: 128px;
+    height: 40px;
+    background-color: #202020;
+    color: #F3F3F3;
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+    user-select: none;
+}
+.buyBtn{
+    width: 128px;
+    height: 40px;
+    background-color: #004CFF;
+    color: #F3F3F3;
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+    user-select: none;
+}

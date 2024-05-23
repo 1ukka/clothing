@@ -1,0 +1,172 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.shopHeader{
+    font-weight: 700;
+    font-size: 28px;
+    color: #202020;
+    font-family: "Raleway", sans-serif;
+}
+
+.handleSearch{
+    width: 235px;
+    height: 36px;
+    border-radius: 60px;
+    background-color: #E5EBFC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.search{
+    border: none;
+    background-color: #E5EBFC;
+    width: 80%;
+    height: 100%;
+}
+
+.search::placeholder{
+    opacity: 0.5;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.search::placeholder{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #202020;
+}
+
+.cameraIcon{
+    width: 19px;
+    height: 19px;
+}
+
+.handleCameraIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoryGrid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.handleCategoryImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px 0px #00000029;
+    
+}
+
+.categoryImg{
+    width: 75px;
+    height: 75px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.categoryName{
+    font-weight: 300;
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.items{
+    margin-top: 25px;
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.filterHeader{
+    font-weight: 700;
+    font-size: 21px;
+    font-family: "Raleway", sans-serif;
+    color: #202020;
+    margin: 0;
+}
+
+.filterIcon{
+    width: 25px;
+    height: 25px;
+    margin: 0;
+}
+
+.item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 20px;
+    margin-top: 20px;
+    padding-bottom: 90px;
+}
+
+
+.handleImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 165px;
+    height: 181px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px 0px #0000001A;
+}
+
+.itemImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.cardTitle{
+    font-weight: 400;
+    font-size: 12px;
+    font-family: "Nunito Sans", sans-serif;
+    width: 138px;
+    margin-top: 6px;
+    line-height: 16px;
+    margin-left: 0px;
+}
+
+.cardPrice{
+    font-weight: 700;
+    font-size: 17px;
+    font-family: "raleway", sans-serif;
+    color: #202020;
+    margin-top: 6px;
+}

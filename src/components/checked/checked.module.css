@@ -1,0 +1,19 @@
+.check{
+    width: 22px;
+    height: 22px;
+    border: 2px solid #fff;
+    background-color: #EFEFEF;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allChecked{
+    background-color: #0042E0;
+    color: #fff;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}

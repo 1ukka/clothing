@@ -1,0 +1,135 @@
+
+
+.leftImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.rightImg{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: -1;
+}
+
+.accountHeader{
+    padding-top: 132px;
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 54px;
+    color: #202020;
+    font-family: "Raleway", sans-serif;
+    z-index: 1;
+}
+
+.handleCamera {
+    border: 2px dashed #004CFF; /* Use a solid border for control */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: 54px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    border-spacing: 10px;
+}
+
+.inputs{
+    padding: 0 10px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.email{
+    padding: 17px;
+    border-radius: 60px;
+    border: none;
+    gap: 10px;
+    background-color: #F8F8F8;
+    width: 280px;
+    color: #D2D2D2;
+    margin-bottom: 8px;
+}
+
+.email::placeholder{
+    opacity: 0.5;
+}
+
+.email:focus{
+    outline: none;
+}
+
+.handlePassword{
+    padding: 17px;
+    border-radius: 60px;
+    border: none;
+    background-color: #F8F8F8;
+    width: 280px;
+    color: #D2D2D2;
+    display: flex;
+    align-items: center;
+}
+
+.passwordInput::placeholder{
+    opacity: 0.5;
+}
+
+.passwordInput{
+    border: none;
+    width: 90%;
+    height: 100%;
+    background-color: #F8F8F8;
+}
+
+.passwordInput:focus{
+    outline: none;
+}
+
+.phone{
+    padding: 9px 18px;
+    border-radius: 60px;
+    border: none;
+    background-color: #F8F8F8;
+    width: 280px;
+    color: #D2D2D2;
+    margin-top: 8px;
+}
+
+.doneBtn{
+    background-color: #004CFF;
+    width: 335px;
+    height: 61px;
+    border-radius: 20px;
+    border: none;
+    color: #F3F3F3;
+    font-weight: 300;
+    font-size: 22px;
+    font-family: "Nunito Sans", sans-serif;
+    margin-top: 52px;
+}
+
+.cancel{
+    font-weight: 300;
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #202020;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

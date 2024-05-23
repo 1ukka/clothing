@@ -1,0 +1,107 @@
+.leftImg1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.leftImg2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.rightImg{
+    position: absolute;
+    top: 240px;
+    right: 0;
+}
+
+.loginHeader{
+    padding-top: 438px;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 52px;
+    color: #202020;
+    font-family: "Raleway", sans-serif;
+}
+
+.des{
+    font-weight: 300;
+    font-size: 19px;
+    font-family: "Nunito Sans", sans-serif;
+    margin-top: 18px;
+    color: #202020;
+    margin-top: 4px;
+    margin-left: 20px;
+}
+
+.handleEmail{
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email{
+    padding: 0 19px;
+    height: 61px;
+    border-radius: 60px;
+    border: none;
+    gap: 10px;
+    background-color: #F8F8F8;
+    width: 334px;
+    color: #D2D2D2;
+    margin-bottom: 8px;
+}
+
+.email::placeholder{
+    opacity: 0.5;
+}
+
+.email:focus{
+    outline: none;
+}
+
+.handleNextBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.nextBtn{
+    background-color: #004CFF;
+    width: 360px;
+    height: 61px;
+    border-radius: 20px;
+    border: none;
+    color: #F3F3F3;
+    font-weight: 300;
+    font-size: 22px;
+    font-family: "Nunito Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cancel{
+    font-weight: 300;
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #202020;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.img4{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}

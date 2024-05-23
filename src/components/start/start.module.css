@@ -1,0 +1,84 @@
+.pos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.handleClothingIcon{
+    margin-top: 232px;
+    background-color: #FFF;
+    border-radius: 50%;
+    width: 134px;
+    height: 134px;
+    box-shadow: 0px 3px 8px 0px #00000029;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clothingIcon{
+    width: 81px;
+    height: 81px;
+}
+
+.clothingHeader{
+    font-weight: 700;
+    font-size: 52px;
+    color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+    margin-top: 24px;
+}
+
+.desc{
+    font-weight: 300;
+    font-size: 19px;
+    font-family: "Nunito Sans", sans-serif;
+    width: 249px;
+    margin-top: 18px;
+    color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 33px;
+}
+
+.startBtn{
+    background-color: #004CFF;
+    width: 335px;
+    height: 61px;
+    border-radius: 20px;
+    border: none;
+    color: #F3F3F3;
+    font-weight: 300;
+    font-size: 22px;
+    font-family: "Nunito Sans", sans-serif;
+    margin-top: 106px;
+}
+
+.accountText{
+    font-weight: 300;
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #202020;
+}
+
+.handleAccount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.handleAccounticon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #004CFF;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    justify-content: center;
+}
