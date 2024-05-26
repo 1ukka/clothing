@@ -1,0 +1,119 @@
+.tickets {
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .ticketContainer{
+      position: relative;
+      overflow: hidden;
+      width: fit-content;
+  }
+  
+  .ticket {
+    width: 336px;
+    height: 100px;
+    border: 1px solid #004cff;
+    box-shadow: 0px 3px 6px 0px #00000029;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .ticketContainer::before,
+  .ticketContainer::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #004cff;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+  }
+  
+  .ticketContainer::before {
+    left: -12px;
+  }
+  
+  .ticketContainer::after {
+    right: -12px;
+  }
+  
+  .ticketHeader{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px dashed #004cff;
+      padding: 6px 0;
+}
+  
+  .ticketHeaderText{
+      font-weight: 700;
+      font-size: 18px;
+      font-family: "Raleway", sans-serif;
+      color: #004CFF;
+      margin-left: 19px;
+  }
+  
+  .handleTicketHeaderValid{
+      width: 100px;
+      height: 19px;
+      background-color: #FFEBEB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-right: 6px;
+  }
+  
+  .ticketHeaderValid{
+      font-weight: 400;
+      font-size: 11px;
+      font-family: "Raleway", sans-serif;
+      color: #000000;
+  }
+  
+  .ticketContentName{
+      display: flex;
+      align-items: center;
+      margin-top: 19px;
+      margin-left: 19px;
+  }
+  
+  .ticketContentPurchase{
+      font-size: 17px;
+      font-family: "Raleway", sans-serif;
+      color: #202020;
+      font-weight: 700;
+      margin-left: 6px;
+  }
+  
+  .precentage{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: -5px;
+  }
+  
+  .precentageText{
+      font-weight: 600;
+      font-size: 12px;
+      font-family: "Nunito", sans-serif;
+      color: #000000;
+      margin-left: 19px;
+  }
+  
+  .precentageBtn{
+      font-weight: 500;
+      font-size: 14px;
+      font-family: "Raleway", sans-serif;
+      color: #fff;
+      margin-right: 7px;
+      width: 79px;
+      height: 26px;
+      background-color: #004CFF;
+      border-radius: 8px;
+      border: none;
+  }

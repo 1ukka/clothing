@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./item.module.css";
 import "../../App.css";
@@ -11,6 +11,7 @@ import check from "../../assets/Check.svg";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import useAppStore from "../../store";
+
 
 const Item = () => {
   const navigate = useNavigate();

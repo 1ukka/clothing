@@ -12,6 +12,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom"
+import Vouchers from './components/vouchers/vourches'
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
       <Route path="item" element={<Item/>} />
       <Route path="cart" element={<Cart/>} />
       <Route path="payment" element={<Payment/>} />
+      <Route path="vouchers" element={<Vouchers/>} />
     </Routes>
     </BrowserRouter>
     </>

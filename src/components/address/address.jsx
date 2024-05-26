@@ -1,8 +1,14 @@
 import style from './address.module.css'
 import "../../App.css";
 import editBtn from "../../assets/Button.svg";
+import { useState } from 'react';
+import AddressModal from '../addressModal/addressModal';
 
 const Address = () => {
+    const [isAddressModalOpen, setIsAddressModalOpen] = useState(false)
+    const handleIsAddressModalOpen = () => {
+        setIsAddressModalOpen((prev) => !prev);
+      };
     return(
         <div className='container'>
            <div className={style.adress}>
@@ -13,10 +19,11 @@ const Address = () => {
               city
             </div>
             <div>
-              <img className={style.editIcon} src={editBtn} alt="" />
+              <img className={style.editIcon} onClick={handleIsAddressModalOpen} src={editBtn} alt="" />
             </div>
           </div>
         </div>
+        <AddressModal isOpen={isAddressModalOpen} onClose={handleIsAddressModalOpen}/>
         </div>
     )
 }
