@@ -28,10 +28,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 375px;
 }
 
 .inputs{
-    margin-left: 20px;
     margin-top: 20px;
 }
 

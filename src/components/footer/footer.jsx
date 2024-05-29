@@ -60,7 +60,7 @@ const Footer = () => {
             clickedIcon === "item" ? style.clicked : ""
           }`}
           size={25}
-          onClick={() => handleClick("item", "/item")}
+          onClick={() => handleClick("item", "/item/1")}
         />
         <RiShoppingBag3Line
           className={`${style.Icon} ${

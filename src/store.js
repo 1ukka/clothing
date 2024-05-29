@@ -6,20 +6,26 @@ const useAppStore = create((set) => ({
     size: "",
     quantity: 1,
   },
-  cart: JSON.parse(localStorage.getItem('cart')) || [],
+  cart: [],
   setItem: (item) => set({ item }),
   updateItem: (key, value) =>
     set((state) => ({ item: { ...state.item, [key]: value } })),
-  addToCart: (item) => set((state) => {
-    const updatedCart = [...state.cart, item];
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-    return { cart: updatedCart };
-  }),
-  removeItem: (index) => set((state) => {
-    const updatedCart = state.cart.filter((_, i) => i !== index);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-    return { cart: updatedCart };
-  }),
+  addToCart: (newItem) =>
+    set((state) => ({
+      cart: [...state.cart, newItem],
+    })),
+  removeItem: (index) =>
+    set((state) => {
+      const newCart = [...state.cart];
+      newCart.splice(index, 1);
+      return { cart: newCart };
+    }),
+  updateCartItem: (index, updatedItem) =>
+    set((state) => {
+      const newCart = [...state.cart];
+      newCart[index] = { ...newCart[index], ...updatedItem };
+      return { cart: newCart };
+    }),
 }));
 
 export default useAppStore;

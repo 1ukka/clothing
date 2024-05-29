@@ -4,14 +4,24 @@
     padding-right: 10px;
 }
 
-.paymentHeader{
+
+.paymentHeader {
     font-weight: 700;
     font-size: 28px;
     font-family: "Raleway", sans-serif;
     color: #202020;
     margin-bottom: 11px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #fff;
+    transition: border-bottom 0.3s ease;
+    padding: 10px 5px;
 }
 
+.scrolled {
+    border-bottom: 1px solid #e9e5e5;
+}
 .paymentContentHeader{
     display: flex;
     align-items: center;
@@ -96,6 +106,8 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    object-fit: contain;
+    overflow: hidden;
 }
 .paymentQtn{
     border-radius: 50%;
@@ -205,6 +217,7 @@
     font-family: "Nunito Sans", sans-serif;
     color: #202020;
     margin-top: 6px;
+    margin-bottom: 150px;
 }
 
 .checkout{

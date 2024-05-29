@@ -2,11 +2,22 @@
     padding: 20px;
 }
 
-.cartHeader{
+.cartHeader {
     display: flex;
     align-items: center;
     margin-bottom: 11px;
-}
+    position: sticky;
+    background-color: #fff;
+    top: 0;
+    z-index: 9999;
+    padding: 10px 5px;
+    transition: border-bottom 0.3s ease;
+  }
+  
+  .scrolled {
+    border-bottom: 1px solid #e9e5e5;
+    width: 100%;
+  }
 
 .cartText{
     font-weight: 700;
@@ -39,6 +50,7 @@
 
 .cards{
     margin-top: 16px;
+    margin-bottom: 130px;
 }
 
 .card{
@@ -114,7 +126,7 @@
 
 .productPrice{
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Raleway", sans-serif;
     color: #202020;
     margin: 0;

@@ -58,8 +58,15 @@ const Item = () => {
   const handleAddToCartNavigate = () => {
     navigate("/cart");
   };
+
   const handleAddToPaymentNavigate = () => {
-    navigate("/payment");
+    navigate("/payment", {
+      state: {
+        image: itemDetails.image,
+        quantity: item.quantity,
+        totalPrice: (item.quantity * itemDetails.price).toFixed(2),
+      },
+    });
   };
 
   const handleAddToCartAndNavigate = () => {
@@ -80,7 +87,7 @@ const Item = () => {
     <div className="container">
       <div className={style.item}>
         <div className={style.handleItemImg}>
-          <img className={style.itemImg} src={location.state.image} alt={itemDetails.title} />
+          <img className={style.itemImg} src={itemDetails.image} alt={itemDetails.title} />
         </div>
         <div className={style.itemOptions}>
           <div className={style.optionHeader}>Color Options</div>

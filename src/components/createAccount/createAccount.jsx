@@ -7,13 +7,15 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const CreateAccount = () => {
     const [clicked, setClicked] = useState(false);
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [done , setDone] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
+    const fileInputRef = useRef(null);
     const handleDone = () => {
         setDone(true);
         navigate("/item-shop");
@@ -23,9 +25,25 @@ const CreateAccount = () => {
         navigate("/");
     };
 
+    const handleCameraClick = () => {
+      fileInputRef.current.click();
+    };
+
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
     };
+
+    const handleFileChange = (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          setSelectedImage(e.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+
   return (
     <div className="container">
       <div className={style.createAccount}>
@@ -34,9 +52,20 @@ const CreateAccount = () => {
           <img className={style.rightImg} src={accountImgOne} alt="" />
         </div>
         <div className={style.accountHeader}>Create Account</div>
-        <div className={style.handleCamera}>
-          <img src={camera} alt="" />
+        <div className={style.handleCamera} onClick={handleCameraClick}>
+          {selectedImage ? (
+            <img src={selectedImage} alt="Selected" className={style.selectedImage} />
+          ) : (
+            <img src={camera} alt="Upload" />
+          )}
         </div>
+        <input
+          type="file"
+          ref={fileInputRef}
+          style={{ display: "none" }}
+          accept="image/*"
+          onChange={handleFileChange}
+        />
         <div className={style.inputs}>
           <input className={style.email} placeholder="Email" type="text" />
           <div className={style.handlePassword}>

@@ -4,34 +4,91 @@ import deletee from "../../assets/Delete.svg";
 import useAppStore from "../../store";
 import Footer from "../footer/footer";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Address from "../address/address";
 
 const Cart = () => {
   const navigate = useNavigate();
-  const { cart, removeItem } = useAppStore();
+  const { cart, removeItem, updateCartItem } = useAppStore();
   const [quantities, setQuantities] = useState(cart.map(item => item.quantity));
+  const [totalPrices, setTotalPrices] = useState(cart.map(item => item.price * item.quantity));
+  const [grandTotal, setGrandTotal] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const calculateGrandTotal = () => {
+      const total = totalPrices.reduce((acc, price) => acc + price, 0);
+      setGrandTotal(total);
+    };
+
+    calculateGrandTotal();
+  }, [totalPrices]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handlePayment = () => {
-    navigate("/payment");
+    navigate("/payment", {
+      state: { 
+        items: cart.map((item, index) => ({
+          image: item.image,
+          title: item.title,
+          quantity: quantities[index],
+          totalPrice: totalPrices[index].toFixed(2)
+        })),
+        grandTotal: grandTotal.toFixed(2)
+      }
+    });
   };
 
   const handleIncrement = (index) => {
     const newQuantities = [...quantities];
     newQuantities[index] += 1;
     setQuantities(newQuantities);
+    updateCartItem(index, { quantity: newQuantities[index] });
+
+    const newTotalPrices = [...totalPrices];
+    newTotalPrices[index] = newQuantities[index] * cart[index].price;
+    setTotalPrices(newTotalPrices);
   };
 
   const handleDecrement = (index) => {
     const newQuantities = [...quantities];
     newQuantities[index] = newQuantities[index] > 1 ? newQuantities[index] - 1 : 1;
     setQuantities(newQuantities);
+    updateCartItem(index, { quantity: newQuantities[index] });
+
+    const newTotalPrices = [...totalPrices];
+    newTotalPrices[index] = newQuantities[index] * cart[index].price;
+    setTotalPrices(newTotalPrices);
+  };
+
+  const handleRemoveItem = (index) => {
+    removeItem(index);
+    const newQuantities = quantities.filter((_, i) => i !== index);
+    setQuantities(newQuantities);
+
+    const newTotalPrices = totalPrices.filter((_, i) => i !== index);
+    setTotalPrices(newTotalPrices);
   };
 
   return (
     <div className="container">
       <div className={style.cart}>
-        <div className={style.cartHeader}>
+      <div className={`${style.cartHeader} ${isScrolled ? style.scrolled : ""}`}>
           <div className={style.cartText}>Cart</div>
           <div className={style.qtn}>
             <div className={style.qtnContainer}>
@@ -40,8 +97,7 @@ const Cart = () => {
           </div>
         </div>
         <div className={style.handleAddress}>
-
-        <Address />
+          <Address />
         </div>
         <div className={style.cards}>
           {cart.map((item, index) => (
@@ -54,7 +110,7 @@ const Cart = () => {
                       className={style.delete}
                       src={deletee}
                       alt=""
-                      onClick={() => removeItem(index)}
+                      onClick={() => handleRemoveItem(index)}
                     />
                   </div>
                 </div>
@@ -67,7 +123,7 @@ const Cart = () => {
                   {item.color}, Size {item.size}
                 </div>
                 <div className={style.action}>
-                  <div className={style.productPrice}>${item.price}</div>
+                  <div className={style.productPrice}>${totalPrices[index].toFixed(2)}</div>
                   <div className={style.productQtn}>
                     <div className={style.quantity}>
                       <div
@@ -97,7 +153,7 @@ const Cart = () => {
             <div className={style.content}>
               <div className={style.checkoutLeft}>
                 <div className={style.checkoutText}>
-                  Total: <span className={style.checkoutPrice}>$34,00</span>
+                  Total: <span className={style.checkoutPrice}>${grandTotal.toFixed(2)}</span>
                 </div>
               </div>
               <div className={style.checkoutRight}>

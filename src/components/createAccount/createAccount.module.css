@@ -40,6 +40,14 @@
     border-spacing: 10px;
 }
 
+.selectedImage{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+}
+
 .inputs{
     padding: 0 10px;
     margin-top: 30px;
