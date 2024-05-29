@@ -32,7 +32,7 @@ const Start = () => {
             Beautiful eCommerce UI Kit for your online store
           </div>
         </div>
-        <div className={style.pos}>
+        <div className={style.posi}>
           <button onClick={handleLogin} className={style.startBtn}>
             Let's get started
           </button>

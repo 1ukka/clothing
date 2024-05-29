@@ -1,13 +1,11 @@
 .tickets {
     overflow-y: auto;
-    margin-top: 10px;
   }
   
   .ticketContainer{
       position: relative;
       overflow: hidden;
       width: fit-content;
-      margin: auto;
   }
   
   .ticket {
@@ -61,7 +59,7 @@
   .handleTicketHeaderValid{
       width: 100px;
       height: 19px;
-      background-color: #FFEBEB;
+      background-color: #F9F9F9;
       display: flex;
       align-items: center;
       justify-content: center;

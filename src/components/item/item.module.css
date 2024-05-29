@@ -3,17 +3,27 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    position: relative;
+    position: sticky;
+    top: 0;
 }
+
+.itemImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
 
 .itemOptions{
     background-color: #fff;
     width: 100%;
     height: 100%;
     border-radius: 9px 9px 0 0;
-    margin-top: -23px;
+    margin-top: -30px;
     z-index: 2;
-    position: absolute;
+    position: relative;
 }
 
 .optionHeader{
@@ -21,8 +31,9 @@
     font-size: 17px;
     font-family: "Raleway", sans-serif;
     color: #202020;
-    margin-top: 20px;
+    margin-top: -30px;
     margin-left: 20px;
+    padding-top: 20px;
 }
 .options{
     display: flex;
@@ -34,8 +45,19 @@
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: #F9F9F9;
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+    font-size: 50px;
+    font-family: "Raleway", sans-serif;
+    color: #202020;
 }
 
 
@@ -45,7 +67,7 @@
 
 .check{
     position: absolute;
-    z-index: 3;
+    z-index: 1;
     bottom: 7px;
     left: 8px;
 }
@@ -102,6 +124,8 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 34px;
+    padding: 0 20px;
+    margin-bottom: 90px;
 }
 
 .quantity{
@@ -181,11 +205,11 @@
     background-color: #fff;
     max-width: 375px;
     margin: auto;
+    z-index: 999;
+
 }
 
-.container{
-   max-width: 370px;
-}
+
 
 .content{
     display: flex;

@@ -3,6 +3,18 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 27px;
+    width: 100%;
+}
+
+.posi{
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #FFFFFF;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .Vouchers{
@@ -90,4 +102,5 @@
     align-items: center;
     justify-content: center;
     margin-top: 21px;
+    margin-bottom: 40px;
 }

@@ -3,8 +3,15 @@
     align-items: center;
     justify-content: center;
 }
+
+.posi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+}
 .handleClothingIcon{
-    margin-top: 232px;
+    margin-top: 142px;
     background-color: #FFF;
     border-radius: 50%;
     width: 134px;
@@ -70,6 +77,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 24px;
+    padding-bottom: 20px;
 }
 
 .handleAccounticon{

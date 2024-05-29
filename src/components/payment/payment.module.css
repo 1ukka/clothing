@@ -141,6 +141,10 @@
     margin-bottom: 10px;
 }
 
+.shippingOptions{
+    margin-right: 20px;
+}
+
 .shippingOption{
     display: flex;
     align-items: center;
@@ -149,9 +153,8 @@
     background-color: #F9F9F9;
     width: 335px;
     height: 40px;
-    padding-left: 12px;
-    padding-right: 20px;
     border-radius: 12px;
+    padding: 0 12px;
 }
 
 .shippingLeft{
@@ -167,6 +170,8 @@
     color: #000000;
     flex: 1;
 }
+
+
 
 .shippingDays{
     width: 72px;

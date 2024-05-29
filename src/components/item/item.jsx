@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import style from "./item.module.css";
 import "../../App.css";
-import itemImg from "../../assets/itemImg.svg";
 import op1 from "../../assets/Placeholder_01.svg";
 import op2 from "../../assets/Option 04.svg";
 import op3 from "../../assets/Option 03.svg";
@@ -12,11 +11,27 @@ import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import useAppStore from "../../store";
 
-
 const Item = () => {
+  const { id } = useParams(); // Get the item ID from the URL
+  const location = useLocation();
   const navigate = useNavigate();
   const { item, updateItem, addToCart } = useAppStore();
   const [isFavorited, setIsFavorited] = useState(false);
+  const [itemDetails, setItemDetails] = useState(null);
+
+  useEffect(() => {
+    const fetchItem = async () => {
+      try {
+        const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+        const data = await response.json();
+        setItemDetails(data);
+      } catch (error) {
+        console.error("Error fetching item:", error);
+      }
+    };
+
+    fetchItem();
+  }, [id]);
 
   const handleOptionClick = (color) => {
     updateItem("color", color);
@@ -43,17 +58,29 @@ const Item = () => {
   const handleAddToCartNavigate = () => {
     navigate("/cart");
   };
+  const handleAddToPaymentNavigate = () => {
+    navigate("/payment");
+  };
 
   const handleAddToCartAndNavigate = () => {
-    addToCart();
+    addToCart({
+      ...itemDetails,
+      quantity: item.quantity,
+      color: item.color,
+      size: item.size,
+    });
     handleAddToCartNavigate();
   };
+
+  if (!itemDetails) {
+    return <div className={style.loading}>Loading...</div>;
+  }
 
   return (
     <div className="container">
       <div className={style.item}>
         <div className={style.handleItemImg}>
-          <img className={style.itemImg} src={itemImg} alt="" />
+          <img className={style.itemImg} src={location.state.image} alt={itemDetails.title} />
         </div>
         <div className={style.itemOptions}>
           <div className={style.optionHeader}>Color Options</div>
@@ -159,7 +186,7 @@ const Item = () => {
                   </button>
                 </div>
                 <div>
-                  <button className={style.buyBtn}>Buy now</button>
+                  <button onClick={handleAddToPaymentNavigate} className={style.buyBtn}>Buy now</button>
                 </div>
               </div>
             </div>

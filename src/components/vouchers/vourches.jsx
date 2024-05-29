@@ -2,13 +2,11 @@ import style from "./vouchers.module.css";
 import "../../App.css";
 import { useNavigate } from "react-router-dom";
 import persona from "../../assets/persona.svg";
-import list from "../../assets/list.svg";
-import sittengs from "../../assets/sittengs.svg";
 import vouchers from "../../assets/vouchers.svg";
 import { useState } from "react";
 import { CiMenuFries, CiSettings } from "react-icons/ci";
-import Ticket from "../ticket/ticket";
 import Footer from "../footer/footer";
+import VoucherTicket from "../voucherTicket/voucherTicket";
 
 const Vouchers = () => {
   const navigate = useNavigate();
@@ -18,6 +16,7 @@ const Vouchers = () => {
   return (
     <div className="container">
       <div className={style.Vouchers}>
+        <div className={style.posi}>
         <div className={style.VouchersHeader}>
           <div className={style.leftSide}>
             <div className={style.VouchersImg}>
@@ -72,8 +71,9 @@ const Vouchers = () => {
             Progress
           </div>
         </div>
+        </div>
         <div className={style.handleTickets}>
-            <Ticket />
+            <VoucherTicket />
         </div>
       </div>
       <Footer />

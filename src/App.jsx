@@ -13,6 +13,7 @@ import {
   Routes,
 } from "react-router-dom"
 import Vouchers from './components/vouchers/vourches'
+import Fav from './components/fav/fav'
 function App() {
   return (
     <>
@@ -21,11 +22,12 @@ function App() {
       <Route path="/" element={<Start/>} />
       <Route path="/create-account" element={<CreateAccount/>} />
       <Route path="/login" element={<Login/>} />
-      <Route path="item-shop" element={<ItemShop/>} />
-      <Route path="item" element={<Item/>} />
-      <Route path="cart" element={<Cart/>} />
-      <Route path="payment" element={<Payment/>} />
-      <Route path="vouchers" element={<Vouchers/>} />
+      <Route path="/item-shop" element={<ItemShop/>} />
+      <Route path="/item/:id" element={<Item />} />
+      <Route path="/cart" element={<Cart/>} />
+      <Route path="/payment" element={<Payment/>} />
+      <Route path="/vouchers" element={<Vouchers/>} />
+      <Route path="fav" element={<Fav />} />
     </Routes>
     </BrowserRouter>
     </>

@@ -6,7 +6,7 @@ const DoneModal = ({ isOpen, onClose }) => {
   return (
     isOpen && (
       <div className="container">
-        <div className={style.modalBackground} onClick={onClose}>
+        <div className={style.modalBackground}>
         <div className={style.modal} onClick={(e) => e.stopPropagation()}>
           <div className={style.modalContent}>
             <div className={style.handleShop}>

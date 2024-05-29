@@ -1,7 +1,6 @@
 .modalContainer {
     height: 460px !important;
     box-shadow: none !important;
-    max-width: 395px;
 }
   
   .modalBackdrop {
@@ -24,6 +23,12 @@
     color: #000;
     padding: 20px 26px;
   }
+
+.handleInputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .inputs{
     margin-left: 20px;

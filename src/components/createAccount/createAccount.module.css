@@ -15,7 +15,7 @@
 }
 
 .accountHeader{
-    padding-top: 132px;
+    padding-top: 60px;
     margin-left: 30px;
     font-weight: 700;
     font-size: 50px;
@@ -26,11 +26,11 @@
 }
 
 .handleCamera {
-    border: 2px dashed #004CFF; /* Use a solid border for control */
+    border: 2px dashed #004CFF;
     border-radius: 50%;
     width: 80px;
     height: 80px;
-    margin-top: 54px;
+    margin-top: 34px;
     margin-left: 30px;
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
 
 .inputs{
     padding: 0 10px;
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,6 +126,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .pos{

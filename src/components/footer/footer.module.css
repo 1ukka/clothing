@@ -8,9 +8,18 @@
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
-    max-width: 360px;
-    width: 100%;
+    max-width: 375px;
     box-shadow: 0px -1px 1px 0px #0000001A;
-    margin: auto;
     z-index: 999;
+    margin: auto;
+}
+
+.Icon{
+    color: #004CFF;
+}
+
+.clicked{
+    color: #000000;
+    border-bottom: 2px solid #000;
+    margin-top: 5px;
 }

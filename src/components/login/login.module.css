@@ -4,14 +4,12 @@
     left: 0;
     z-index: 2;
 }
-
 .leftImg2{
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
 }
-
 .rightImg{
     position: absolute;
     top: 240px;
@@ -19,7 +17,7 @@
 }
 
 .loginHeader{
-    padding-top: 438px;
+    padding-top: 325px;
     margin-left: 20px;
     font-weight: 700;
     font-size: 52px;
@@ -38,26 +36,28 @@
 }
 
 .handleEmail{
-    margin-top: 17px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 20px;
 }
 
 .email{
-    padding: 0 19px;
+    width: 334px;
+    padding: 0 20px;
     height: 61px;
     border-radius: 60px;
     border: none;
     gap: 10px;
     background-color: #F8F8F8;
     width: 334px;
-    color: #D2D2D2;
+    opacity: 0.5;
     margin-bottom: 8px;
 }
 
 .email::placeholder{
-    opacity: 0.5;
+
 }
 
 .email:focus{
@@ -68,7 +68,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 36px;
+    margin-top: 20px;
+    padding: 0 20px;
 }
 
 .nextBtn{
@@ -97,6 +98,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    padding-bottom: 30px;
 }
 
 .img4{
