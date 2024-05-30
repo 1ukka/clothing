@@ -10,9 +10,10 @@ import check from "../../assets/Check.svg";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import useAppStore from "../../store";
+import Skeleton from "../skeleton/skeleton";
 
 const Item = () => {
-  const { id } = useParams(); // Get the item ID from the URL
+  const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
   const { item, updateItem, addToCart } = useAppStore();
@@ -80,7 +81,7 @@ const Item = () => {
   };
 
   if (!itemDetails) {
-    return <div className={style.loading}>Loading...</div>;
+    return <div className={style.loading}><Skeleton/></div>;
   }
 
   return (
